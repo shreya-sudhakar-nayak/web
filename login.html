@@ -1,0 +1,53 @@
+<!doctype html>
+<head><title>redfox solutions</title>
+<link rel="stylesheet"href="style.css">
+<script src="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+" rel="stylesheet">
+</head>
+<body>
+<div class="l-main l-main-1 l-main-2" align="center">
+<div class="l-block1 l-block1-1 l-block1-2">
+<img  class="l-image" src="images/logo.png">
+</div>
+<div class="l-block2 l-block2-1 l-block2-2" id="l-block2">
+<h2 class="l-heading1">Login</h2>
+<h3 class="l-heading2">Access To Dashboard</h3>
+<form action="">
+<input class="l-input" type="email" name="email" placeholder="Email"><br>
+<input class="l-input" type="password" name="password" placeholder="Password"><br>
+<button class="l-but l-but-1 l-but-2" type="Submit"> Login</button>
+<button class="l-but l-but-1 l-but-2" type="Submit" ><a class="home" href="home.html">Back</a></button><br><br>
+<a onclick="showSignUpForm()" href='#' class="signup">Signup</a>
+</form>
+</div>
+</div>
+<script>
+function showSignUpForm() {
+  const lBlock2 = document.getElementById('l-block2');
+
+  // Create innerHTML content
+  const formContent = `
+    <form>
+      <h2 "l-heading1">Signup</h2>
+      <input type="text" placeholder="Enter your name" class="l-input"><br>
+      <input type="number" placeholder="Enter your age" class="l-input"><br>
+      <input type="email" placeholder="Enter your email" class="l-input"><br>
+      <input type="password" placeholder="Enter your password" class="l-input"><br>
+	  <input type="radio" class="radio" >   Employer  
+	  <input type="radio" class="radio" >   User<br><br>
+	  <button class="l-but l-but-1 l-but-2" type="Submit"> Signup</button>
+<button class="l-but l-but-1 l-but-2" type="Submit" ><a class="home" href="home.html">Back</a></button>
+    </form>
+  `;
+
+  // Set innerHTML of the div
+  lBlock2.innerHTML = formContent;
+}
+</script>
+
+</body>
+</html>
